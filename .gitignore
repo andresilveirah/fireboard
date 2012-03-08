@@ -1,2 +1,2 @@
 config/sources.yml
-charts/*
+charts/*/
