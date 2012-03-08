@@ -1,0 +1,7 @@
+project_one:
+  user: user1@example.com
+  password: example1
+  
+prject_two:
+  user: user2@example.com
+  password: example2

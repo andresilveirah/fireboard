@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+      <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+      <?xml-stylesheet href='brushmetal.css' type='text/css'?>
+      <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
+      <!-- Axis and Graph Shape -->
+      
+      <rect x='0' y='0' width='980' height='600' fill='rgb(241,241,241)' style='stroke:rgb(241,241,241); stroke-width: 10'/>
+      <rect x='50' y='50' width='930' height='550' fill='white' />
+    
+      <text x="300" y="25" font-family="Verdana" font-size="20" fill="black" >Saldão na Internet </text>
+      <!-- horizontals --> 
+ <text x="15" y="55" font-family="Verdana" font-size="15" fill="black" >100</text>  
+            <line x1='50' y1='50' x2='980' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="110" font-family="Verdana" font-size="15" fill="black" >90</text>  
+            <line x1='50' y1='105' x2='980' y2='105' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="165" font-family="Verdana" font-size="15" fill="black" >80</text>  
+            <line x1='50' y1='160' x2='980' y2='160' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="220" font-family="Verdana" font-size="15" fill="black" >70</text>  
+            <line x1='50' y1='215' x2='980' y2='215' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="275" font-family="Verdana" font-size="15" fill="black" >60</text>  
+            <line x1='50' y1='270' x2='980' y2='270' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="330" font-family="Verdana" font-size="15" fill="black" >50</text>  
+            <line x1='50' y1='325' x2='980' y2='325' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="385" font-family="Verdana" font-size="15" fill="black" >40</text>  
+            <line x1='50' y1='380' x2='980' y2='380' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="440" font-family="Verdana" font-size="15" fill="black" >30</text>  
+            <line x1='50' y1='435' x2='980' y2='435' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="495" font-family="Verdana" font-size="15" fill="black" >20</text>  
+            <line x1='50' y1='490' x2='980' y2='490' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="550" font-family="Verdana" font-size="15" fill="black" >10</text>  
+            <line x1='50' y1='545' x2='980' y2='545' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+           <text x="15" y="605" font-family="Verdana" font-size="15" fill="black" >0</text>  
+            <line x1='50' y1='600' x2='980' y2='600' style='stroke:rgb(241,241,241); stroke-width: 1'/> 
+          <!-- verticals --> 
+ <text x="45" y="620" font-family="Verdana" font-size="15" fill="black" >1</text> 
+            <line x1='80' y1='600' x2='80' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="75" y="620" font-family="Verdana" font-size="15" fill="black" >2</text> 
+            <line x1='110' y1='600' x2='110' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="105" y="620" font-family="Verdana" font-size="15" fill="black" >3</text> 
+            <line x1='140' y1='600' x2='140' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="135" y="620" font-family="Verdana" font-size="15" fill="black" >4</text> 
+            <line x1='170' y1='600' x2='170' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="165" y="620" font-family="Verdana" font-size="15" fill="black" >5</text> 
+            <line x1='200' y1='600' x2='200' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="195" y="620" font-family="Verdana" font-size="15" fill="black" >6</text> 
+            <line x1='230' y1='600' x2='230' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="225" y="620" font-family="Verdana" font-size="15" fill="black" >7</text> 
+            <line x1='260' y1='600' x2='260' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="255" y="620" font-family="Verdana" font-size="15" fill="black" >8</text> 
+            <line x1='290' y1='600' x2='290' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="285" y="620" font-family="Verdana" font-size="15" fill="black" >9</text> 
+            <line x1='320' y1='600' x2='320' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="315" y="620" font-family="Verdana" font-size="15" fill="black" >10</text> 
+            <line x1='350' y1='600' x2='350' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="345" y="620" font-family="Verdana" font-size="15" fill="black" >11</text> 
+            <line x1='380' y1='600' x2='380' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="375" y="620" font-family="Verdana" font-size="15" fill="black" >12</text> 
+            <line x1='410' y1='600' x2='410' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="405" y="620" font-family="Verdana" font-size="15" fill="black" >13</text> 
+            <line x1='440' y1='600' x2='440' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="435" y="620" font-family="Verdana" font-size="15" fill="black" >14</text> 
+            <line x1='470' y1='600' x2='470' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="465" y="620" font-family="Verdana" font-size="15" fill="black" >15</text> 
+            <line x1='500' y1='600' x2='500' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="495" y="620" font-family="Verdana" font-size="15" fill="black" >16</text> 
+            <line x1='530' y1='600' x2='530' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="525" y="620" font-family="Verdana" font-size="15" fill="black" >17</text> 
+            <line x1='560' y1='600' x2='560' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="555" y="620" font-family="Verdana" font-size="15" fill="black" >18</text> 
+            <line x1='590' y1='600' x2='590' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="585" y="620" font-family="Verdana" font-size="15" fill="black" >19</text> 
+            <line x1='620' y1='600' x2='620' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="615" y="620" font-family="Verdana" font-size="15" fill="black" >20</text> 
+            <line x1='650' y1='600' x2='650' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="645" y="620" font-family="Verdana" font-size="15" fill="black" >21</text> 
+            <line x1='680' y1='600' x2='680' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="675" y="620" font-family="Verdana" font-size="15" fill="black" >22</text> 
+            <line x1='710' y1='600' x2='710' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="705" y="620" font-family="Verdana" font-size="15" fill="black" >23</text> 
+            <line x1='740' y1='600' x2='740' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="735" y="620" font-family="Verdana" font-size="15" fill="black" >24</text> 
+            <line x1='770' y1='600' x2='770' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="765" y="620" font-family="Verdana" font-size="15" fill="black" >25</text> 
+            <line x1='800' y1='600' x2='800' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="795" y="620" font-family="Verdana" font-size="15" fill="black" >26</text> 
+            <line x1='830' y1='600' x2='830' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="825" y="620" font-family="Verdana" font-size="15" fill="black" >27</text> 
+            <line x1='860' y1='600' x2='860' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="855" y="620" font-family="Verdana" font-size="15" fill="black" >28</text> 
+            <line x1='890' y1='600' x2='890' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="885" y="620" font-family="Verdana" font-size="15" fill="black" >29</text> 
+            <line x1='920' y1='600' x2='920' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="915" y="620" font-family="Verdana" font-size="15" fill="black" >30</text> 
+            <line x1='950' y1='600' x2='950' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+         <text x="945" y="620" font-family="Verdana" font-size="15" fill="black" >31</text> 
+            <line x1='980' y1='600' x2='980' y2='50' style='stroke:rgb(241,241,241); stroke-width: 1'/>
+        
+      <!-- / Axis and Graph Shape -->
+       <circle cx='50' cy='501.0' r='4' fill='#2166AC' /> 
+
+      <!-- / Marks -->
+      <!-- Data_Line -->
+      <polyline style='stroke:#2166AC; stroke-width: 2' fill='none'
+    points= ' 50, 501.0 
+'/>
+      <!-- / Data_Line -->
+      </svg>
+    
