@@ -1,4 +1,7 @@
 module FireChart
+  def auto_scaling
+    return "It works!"
+  end
   def generate_shape
     %Q{
       <rect x='0' y='0' width='980' height='600' fill='rgb(241,241,241)' style='stroke:rgb(241,241,241); stroke-width: 10'/>
