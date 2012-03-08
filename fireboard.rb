@@ -118,7 +118,7 @@ end
 p "PROJETOS done.  ---------------------------------- #{Time.now.strftime("%d/%m/%Y (%H:%M:%S)")}"
 
 p "Generating charts... ----------------------------- #{Time.now.strftime("%d/%m/%Y (%H:%M:%S)")}"
-
+ 
 # Cria um novo diretorio com um timestamp como nome
 dir = Time.now.strftime("%Y%m%d")
 system("mkdir charts/#{dir}")
