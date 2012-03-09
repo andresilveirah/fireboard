@@ -1,7 +1,15 @@
 module FireChart
-  def auto_scaling
-    return "It works!"
+  
+  BASIC_SCALE = 5.5 # because of chart size limited (yet)
+  @@current_scale = BASIC_SCALE
+  
+  def auto_scale data
+    if data.max > 100
+      @@current_scale = (@@current_scale * 100 )/ data.max
+    end
+    return @@current_scale
   end
+
   def generate_shape
     %Q{
       <rect x='0' y='0' width='980' height='600' fill='rgb(241,241,241)' style='stroke:rgb(241,241,241); stroke-width: 10'/>
@@ -38,7 +46,7 @@ module FireChart
     i = 0
     dia = 50
     while i < bugs.size
-      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * 5.5}' r='4' fill='#2166AC' /> \n"
+      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * @@current_scale}' r='4' fill='#2166AC' /> \n"
       i += 1
       dia += 30
     end
@@ -53,7 +61,7 @@ module FireChart
     dia = 50
 
     while i < bugs.size
-      data_line += "#{dia}, #{600 - bugs[i] * 5.5} \n"
+      data_line += "#{dia}, #{600 - bugs[i] * @@current_scale} \n"
       i += 1
       dia += 30
     end
@@ -64,6 +72,8 @@ module FireChart
   end
  
   def create_chart project_name, bug_occurrences, options = {}
+    auto_scale bug_occurrences
+    
     svg_string = %Q{<?xml version='1.0' encoding='UTF-8'?>
       <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
       <?xml-stylesheet href='brushmetal.css' type='text/css'?>
@@ -92,5 +102,3 @@ module FireChart
     end
   end
 end
-
-
