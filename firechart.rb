@@ -5,7 +5,7 @@ module FireChart
   
   def auto_scale data
     if data.max > 100
-      @@current_scale = data.max / 100
+      @@current_scale = (data.max / 100.0).round
     end
     return @@current_scale
   end
@@ -53,7 +53,7 @@ module FireChart
     i = 0
     dia = 50
     while i < bugs.size
-      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * (@@current_scale / GRAPH_FACTOR)}' r='4' fill='#2166AC' /> \n"
+      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * (GRAPH_FACTOR/@@current_scale)}' r='4' fill='#2166AC' /> \n"
       i += 1
       dia += 30
     end
@@ -68,7 +68,7 @@ module FireChart
     dia = 50
 
     while i < bugs.size
-      data_line += "#{dia}, #{600 - bugs[i] * (@@current_scale / GRAPH_FACTOR)} \n"
+      data_line += "#{dia}, #{600 - bugs[i] * (GRAPH_FACTOR / @@current_scale)} \n"
       i += 1
       dia += 30
     end
