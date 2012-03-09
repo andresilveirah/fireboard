@@ -1,18 +1,25 @@
 module FireChart
   
-  BASIC_SCALE = 5.5 # because of chart size limited (yet)
-  @@current_scale = BASIC_SCALE
+  GRAPH_FACTOR = 5.5 # because of chart size limited (yet)
+  @@current_scale = 1
   
   def auto_scale data
     if data.max > 100
-      @@current_scale = (@@current_scale * 100 )/ data.max
+      @@current_scale = data.max / 100
     end
     return @@current_scale
+  end
+  
+  def print_scale
+    %Q{
+      <rect x="830" y="625" width="150" height="25" fill="white" />
+      <text font-family="Verdana" font-size="15" fill="black" x="855" y="643">Escala: #{@@current_scale}x</text>
+    }
   end
 
   def generate_shape
     %Q{
-      <rect x='0' y='0' width='980' height='600' fill='rgb(241,241,241)' style='stroke:rgb(241,241,241); stroke-width: 10'/>
+      <rect x='0' y='0' width='980' height='650' fill='rgb(241,241,241)' style='stroke:rgb(241,241,241); stroke-width: 10'/>
       <rect x='50' y='50' width='930' height='550' fill='white' />
     }
   end
@@ -46,7 +53,7 @@ module FireChart
     i = 0
     dia = 50
     while i < bugs.size
-      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * @@current_scale}' r='4' fill='#2166AC' /> \n"
+      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * (@@current_scale / GRAPH_FACTOR)}' r='4' fill='#2166AC' /> \n"
       i += 1
       dia += 30
     end
@@ -61,7 +68,7 @@ module FireChart
     dia = 50
 
     while i < bugs.size
-      data_line += "#{dia}, #{600 - bugs[i] * @@current_scale} \n"
+      data_line += "#{dia}, #{600 - bugs[i] * (@@current_scale / GRAPH_FACTOR)} \n"
       i += 1
       dia += 30
     end
@@ -87,6 +94,7 @@ module FireChart
       <!-- / Marks -->
       <!-- Data_Line -->
       #{generate_data_line(bug_occurrences)}
+      #{print_scale}
       <!-- / Data_Line -->
       </svg>
     }
