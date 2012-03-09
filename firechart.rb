@@ -1,19 +1,27 @@
-module FireChart
+class FireChart
   
   GRAPH_FACTOR = 5.5 # because of chart size limited (yet)
-  @@current_scale = 1
   
-  def auto_scale data
-    if data.max > 100
-      @@current_scale = (data.max / 100.0).round
+  attr_accessor :project_name, :data, :options
+  
+  def initialize project_name, data, options = {}
+    @current_scale = 1
+    @project_name = project_name
+    @data = data
+    @options = options
+  end
+  
+  def auto_scale 
+    if self.data.max > 100
+      @current_scale = (self.data.max / 100.0).ceil
     end
-    return @@current_scale
+    return @current_scale
   end
   
   def print_scale
     %Q{
       <rect x="830" y="625" width="150" height="25" fill="white" />
-      <text font-family="Verdana" font-size="15" fill="black" x="855" y="643">Escala: #{@@current_scale}x</text>
+      <text font-family="Verdana" font-size="15" fill="black" x="855" y="643">Escala: #{@current_scale}x</text>
     }
   end
 
@@ -44,31 +52,31 @@ module FireChart
       return grid
   end
   
-  def put_project_title name
-    %Q{<text x="300" y="25" font-family="Verdana" font-size="20" fill="black" >#{name}</text>}
+  def put_project_title
+    %Q{<text x="300" y="25" font-family="Verdana" font-size="20" fill="black" >#{self.project_name}</text>}
   end
   
-  def generate_marks bugs
+  def generate_marks 
     marks = " "
     i = 0
     dia = 50
-    while i < bugs.size
-      marks += "<circle cx='#{dia}' cy='#{600 - bugs[i] * (GRAPH_FACTOR/@@current_scale)}' r='4' fill='#2166AC' /> \n"
+    while i < self.data.size
+      marks += "<circle cx='#{dia}' cy='#{600 - self.data[i] * (GRAPH_FACTOR/@current_scale)}' r='4' fill='#2166AC' /> \n"
       i += 1
       dia += 30
     end
     return marks
   end
   
-  def generate_data_line bugs
+  def generate_data_line
     data_line = "<polyline style='stroke:#2166AC; stroke-width: 2' fill='none'
     points= ' "
 
     i = 0
     dia = 50
 
-    while i < bugs.size
-      data_line += "#{dia}, #{600 - bugs[i] * (GRAPH_FACTOR / @@current_scale)} \n"
+    while i < self.data.size
+      data_line += "#{dia}, #{600 - self.data[i] * (GRAPH_FACTOR / @current_scale)} \n"
       i += 1
       dia += 30
     end
@@ -78,8 +86,8 @@ module FireChart
     return data_line
   end
  
-  def create_chart project_name, bug_occurrences, options = {}
-    auto_scale bug_occurrences
+  def create_chart
+    auto_scale 
     
     svg_string = %Q{<?xml version='1.0' encoding='UTF-8'?>
       <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
@@ -87,24 +95,24 @@ module FireChart
       <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
       <!-- Axis and Graph Shape -->
       #{generate_shape}
-      #{put_project_title project_name}
+      #{put_project_title}
       #{generate_grid_and_axis}
       <!-- / Axis and Graph Shape -->
-      #{generate_marks(bug_occurrences)}
+      #{generate_marks}
       <!-- / Marks -->
       <!-- Data_Line -->
-      #{generate_data_line(bug_occurrences)}
+      #{generate_data_line}
       #{print_scale}
       <!-- / Data_Line -->
       </svg>
     }
     
-    if options[:path]
-      File.open(options[:path],"w"){ |arq| 
+    if self.options[:path]
+      File.open(self.options[:path],"w"){ |arq| 
         arq.write(svg_string)
       }
     else
-      File.open("#{project_name}.svg","w"){ |arq| 
+      File.open("#{self.project_name}.svg","w"){ |arq| 
         arq.write(svg_string)
       }
     end

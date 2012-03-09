@@ -15,7 +15,6 @@ require "active_record"
 require 'yaml'
 
 require "./firechart"
-include FireChart
 
 ActiveRecord::Base.establish_connection(
 :adapter => "mysql2",
@@ -128,7 +127,7 @@ Project.order("created_at ASC").each do |project|
   report_data_dates = []
   project.reports.map{ |report| report_data_bugs << report.bug_occurrences}
 
-  create_chart project.name, report_data_bugs, {:path => "charts/#{dir}/#{project.name}.svg"}
+  FireChart.new( project.name, report_data_bugs, {:path => "charts/#{dir}/#{project.name}.svg"}).create_chart
 end
 
 p "All charts Done. --------------------------------- #{Time.now.strftime("%d/%m/%Y (%H:%M:%S)")}"
