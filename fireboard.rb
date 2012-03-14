@@ -127,7 +127,8 @@ Project.order("created_at ASC").each do |project|
   report_data_dates = []
   project.reports.map{ |report| report_data_bugs << report.bug_occurrences}
 
-  FireChart.new( project.name, report_data_bugs, {:path => "charts/#{dir}/#{project.name}.svg"}).create_chart
+  FireChart.new( project.name, report_data_bugs, {:path => "charts/#{dir}/#{project.name}.svg",
+                                                  :axis_scalling => true}).create_chart
 end
 
 p "All charts Done. --------------------------------- #{Time.now.strftime("%d/%m/%Y (%H:%M:%S)")}"

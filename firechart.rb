@@ -76,7 +76,7 @@ class FireChart
     return grid
   end
   
-  def put_project_title
+  def put_chart_title
     %Q{<text x="300" y="25" font-family="Verdana" font-size="20" fill="black" >#{self.chart_name}</text>}
   end
   
@@ -119,9 +119,9 @@ class FireChart
       <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
       <!-- Axis and Graph Shape -->
       #{generate_shape}
-      #{put_project_title}
+      #{put_chart_title}
       #{
-        if options[:axis_scalling]
+        if self.options[:axis_scalling]
           generate_grid_and_axis(:scale => true)
         else
           generate_grid_and_axis(:scale => false)
