@@ -1,19 +1,42 @@
 .caption{
-	font-size: 14px;
-	font-family: Georgia, serif;
+	font-size: 18px;
+	font-family: Verdana, sans-serif;
+	color: white;
 }
 .tooltip{
-	font-size: 12px;
+	font-size: 18px;
+	font-family: Verdana, sans-serif;
+	fill: white;
 }
 .tooltip_bg{
-	fill: white;
+	fill: #4c4c4c;
 	stroke: black;
 	stroke-width: 1;
 	opacity: 0.85;
+	height: 200px;
+}
+
+.mark{
+	fill: #2166AC;
+}
+
+.grid{
+	stroke: rgb(241,241,241);
+	stroke-width: 1;
+}
+
+.outer_shape{
+	fill: rgb(241,241,241);
+	stroke: rgb(241,241,241);
+	stroke-width: 10;
+}
+
+.inner_shape{
+	fill: white;
 }
 
 /*
-baisc colors:
+basic colors:
 verde dito #84c44a
 azul #2166AC
 cinza rgb(241,241,241)
